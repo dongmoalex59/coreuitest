@@ -9,6 +9,9 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 import { AgGridModule } from 'ag-grid-angular';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -61,7 +64,9 @@ import { AngulargridComponent } from './angulargrid/angulargrid.component';
     ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
-    AgGridModule.withComponents([])
+    FormsModule,
+    AgGridModule.withComponents([]),
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
